@@ -1,0 +1,76 @@
+---
+export interface Props {
+  eventName: string;
+  eventDate: string;
+  eventLocation: string;
+  eventDescription: string;
+  eventImage: string;
+  eventType?: string;
+}
+
+const {
+  eventName,
+  eventDate,
+  eventLocation,
+  eventDescription,
+  eventImage = '/images/eventos/default-preview.jpg',
+  eventType = 'XV años'
+} = Astro.props;
+
+const basePath = import.meta.env.BASE_URL || '/';
+const siteUrl = import.meta.env.SITE || 'https://mis-quince.com.mx';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const imageUrl = new URL(eventImage.startsWith('/') ? eventImage : `/${eventImage}`, siteUrl).href;
+const title = `${eventName} - ${eventType}`;
+const description = eventDescription || `Te invitamos a celebrar ${eventType} de ${eventName}. ${eventDate} en ${eventLocation}.`;
+const keywords = `${eventType}, ${eventName}, fiesta, celebración, invitación, evento`;
+---
+
+<!-- SEO específico para eventos -->
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:site_name" content="MisQuince" />
+<meta property="og:locale" content="es_MX" />
+
+<!-- Metadatos adicionales para eventos -->
+<meta property="event:start_time" content={eventDate} />
+<meta property="event:location" content={eventLocation} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalUrl} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={imageUrl} />
+
+<!-- Structured Data para eventos -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": title,
+  "description": description,
+  "image": imageUrl,
+  "startDate": eventDate,
+  "location": {
+    "@type": "Place",
+    "name": eventLocation,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": eventLocation
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "MisQuince",
+    "url": siteUrl
+  }
+})} />

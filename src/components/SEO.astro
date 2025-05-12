@@ -1,0 +1,66 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  ogType?: string;
+  twitterCard?: string;
+  keywords?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  image = '/images/og-default.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  keywords = 'landing page, eventos, XV años, bodas, fiestas, celebraciones, páginas web',
+} = Astro.props;
+
+const basePath = import.meta.env.BASE_URL || '/';
+const siteUrl = import.meta.env.SITE || 'https://mis-quince.com.mx';
+const canonicalUrl = canonical ? new URL(canonical, siteUrl).href : new URL(Astro.url.pathname, siteUrl).href;
+const imageUrl = new URL(image.startsWith('/') ? image : `/${image}`, siteUrl).href;
+---
+
+<!-- SEO -->
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:site_name" content="MisQuince" />
+<meta property="og:locale" content="es_MX" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content={twitterCard} />
+<meta property="twitter:url" content={canonicalUrl} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={imageUrl} />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": ogType === "website" ? "WebSite" : "WebPage",
+  "url": canonicalUrl,
+  "name": title,
+  "description": description,
+  "image": imageUrl,
+  "publisher": {
+    "@type": "Organization",
+    "name": "MisQuince",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    }
+  }
+})} />

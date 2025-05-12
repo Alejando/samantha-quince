@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import EventHeader from '../../../components/eventos/EventHeader.astro';
+import EventSEO from '../../../components/EventSEO.astro';
 import Hero from '../../../components/eventos/samantha/Hero.astro';
 import Details from '../../../components/eventos/samantha/Details.astro';
 import Theme from '../../../components/eventos/samantha/Theme.astro';
@@ -10,7 +11,18 @@ import Footer from '../../../components/Footer.astro';
 import '../../../styles/global.css';
 ---
 
-<Layout title="Fiesta de 15 años de Samantha - Pool Party">
+<Layout 
+  title="Fiesta de 15 años de Samantha Isabella - Pool Party"
+  useEventSEO={true}
+  eventData={{
+    eventName: "Samantha Isabella",
+    eventDate: "2025-05-23T14:00:00",
+    eventLocation: "Terraza La Ninfa",
+    eventDescription: "Te invitamos a celebrar los XV años de Samantha con una increíble Pool Party. ¡Acompáñanos en este día tan especial!",
+    eventImage: "/images/eventos/samantha-preview.png",
+    eventType: "XV años"
+  }}
+>
   <EventHeader eventName="Samantha" eventColor="var(--pink)" eventSubName="XV", eventSubColor="var(--blue)" />
 
   <div style="padding-top: 80px;">

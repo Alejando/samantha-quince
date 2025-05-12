@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mis-quince.com.mx/sitemap.xml
