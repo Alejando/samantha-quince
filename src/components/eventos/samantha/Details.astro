@@ -1,0 +1,79 @@
+---
+---
+
+<section id="detalles" class="py-20 bg-white relative overflow-hidden">
+  <!-- Elementos flotantes decorativos -->
+  <div class="absolute top-20 left-10 float-small">
+    <div class="w-10 h-10 rounded-full opacity-50" style="background-color: var(--blue);"></div>
+  </div>
+  <div class="absolute top-1/3 right-16 float-reverse" style="animation-delay: 0.5s">
+    <div class="w-8 h-8 rounded-full opacity-50" style="background-color: var(--yellow);"></div>
+  </div>
+  <div class="absolute bottom-1/4 left-1/5 float-slow" style="animation-delay: 1s">
+    <div class="w-12 h-12 rounded-full opacity-50" style="background-color: var(--pink);"></div>
+  </div>
+  <div class="absolute bottom-20 right-20 float" style="animation-delay: 1.5s">
+    <div class="w-9 h-9 rounded-full opacity-50" style="background-color: var(--orange);"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="section-title gradient-text fade-in">Detalles del Evento</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <!-- Fecha -->
+      <div 
+        class="card p-6 text-center border border-gray-200 rounded-xl shadow-lg fade-in-delay-1 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-blue-200 group cursor-pointer" 
+        style="background-color: white;"
+      >
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 group-hover:bg-blue-100 transform group-hover:rotate-12" style="background-color: rgba(78, 205, 196, 0.1);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-500 group-hover:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--blue);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-blue-600">Fecha</h3>
+        <p class="text-lg font-medium text-gray-800 transition-all duration-300 group-hover:text-blue-500">23 de mayo de 2025</p>
+      </div>
+      
+      <!-- Hora -->
+      <div 
+        class="card p-6 text-center border border-gray-200 rounded-xl shadow-lg fade-in-delay-2 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-yellow-200 group cursor-pointer" 
+        style="background-color: white;"
+      >
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 group-hover:bg-yellow-100 transform group-hover:rotate-12" style="background-color: rgba(255, 209, 102, 0.1);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-500 group-hover:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--yellow);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-yellow-600">Hora</h3>
+        <p class="text-lg font-medium text-gray-800 transition-all duration-300 group-hover:text-yellow-500">2:00 PM - 10:00 PM</p>
+      </div>
+      
+      <!-- Lugar -->
+      <div 
+        class="card p-6 text-center border border-gray-200 rounded-xl shadow-lg fade-in-delay-3 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-pink-200 group cursor-pointer" 
+        style="background-color: white;"
+      >
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 group-hover:bg-pink-100 transform group-hover:rotate-12" style="background-color: rgba(255, 107, 107, 0.1);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-500 group-hover:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--pink);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-pink-600">Lugar</h3>
+        <p class="text-lg font-medium text-gray-800 mb-1 transition-all duration-300 group-hover:text-pink-500">Terraza La Ninfa</p>
+        <p class="text-gray-700 text-base transition-all duration-300 group-hover:text-pink-400">Emilio Portes Gil 73, El Rocío, 46600 Ameca, Jal.</p>
+      </div>
+    </div>
+    
+    <div 
+      class="mt-16 text-center max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md border border-gray-200 fade-in-delay-4 transition-all duration-300 hover:shadow-xl hover:border-orange-200 group cursor-pointer"
+    >
+      <p class="text-xl text-gray-800 mb-6 font-medium transition-all duration-300 group-hover:text-orange-600">
+        ¡Acompáñame a celebrar mis XV años con una increíble Pool Party! Habrá música, diversión, comida deliciosa y muchas sorpresas.
+      </p>
+      <p class="text-lg font-medium transition-all duration-300 group-hover:text-orange-500" style="color: var(--blue);">
+        Código de vestimenta: Ropa cómoda para alberca y mucho color
+      </p>
+    </div>
+  </div>
+</section>

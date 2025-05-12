@@ -1,0 +1,75 @@
+---
+---
+
+<section id="ubicacion" class="py-20 bg-white relative overflow-hidden">
+  <!-- Elementos flotantes decorativos -->
+  <div class="absolute top-24 right-20 float-reverse">
+    <div class="w-14 h-14 rounded-full opacity-40" style="background-color: var(--blue);"></div>
+  </div>
+  <div class="absolute top-1/3 left-12 float-small" style="animation-delay: 0.5s">
+    <div class="w-10 h-10 rounded-full opacity-40" style="background-color: var(--yellow);"></div>
+  </div>
+  <div class="absolute bottom-1/4 right-16 float" style="animation-delay: 1.5s">
+    <div class="w-12 h-12 rounded-full opacity-40" style="background-color: var(--orange);"></div>
+  </div>
+  <div class="container mx-auto px-4">
+    <h2 class="section-title gradient-text">Ubicación</h2>
+    
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Location details -->
+        <div class="fade-in">
+          <div class="card p-6 bg-white rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-blue-200 group cursor-pointer">
+            <h3 class="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-blue-600" style="color: var(--blue);">Terraza La Ninfa</h3>
+            <p class="text-gray-600 mb-4 transition-colors duration-300 group-hover:text-blue-500">
+              Emilio Portes Gil 73, El Rocío, 46600 Ameca, Jal.
+            </p>
+            
+            <div class="mb-6">
+              <h4 class="font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-blue-600">Cómo llegar:</h4>
+              <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                <li class="transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-500">Desde el centro de Ameca, toma la Av. Emilio Portes Gil hacia el norte.</li>
+                <li class="transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-500" style="transition-delay: 50ms">Pasando el Fraccionamiento El Rocío, encontrarás la Terraza La Ninfa a mano derecha.</li>
+                <li class="transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-500" style="transition-delay: 100ms">Hay estacionamiento disponible en el lugar.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-blue-600">Instalaciones:</h4>
+              <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                <li class="transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-500">Alberca amplia con área de chapoteadero</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="fade-in-delay-1">
+          <div class="card overflow-hidden h-full bg-white rounded-xl shadow-md border border-gray-200">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9518851342694!2d-104.0233863!3d20.5481073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842173c7a7e20c7d%3A0x5016518b9f7cb4c6!2sEmilio%20Portes%20Gil%2073%2C%20El%20Roc%C3%ADo%2C%2046600%20Ameca%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1620000000000!5m2!1ses-419!2smx" 
+              class="w-full h-[400px] border-0 rounded-xl" 
+              allowfullscreen="" 
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-10 text-center fade-in-delay-2">
+        <a 
+          href="https://maps.app.goo.gl/3YU3wPNzHSRfHe3J8" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-primary inline-flex items-center gap-2 bg-gradient-to-r from-[#4ECDC4] to-[#FF9F1C] hover:from-[#FF6B6B] hover:to-[#FFD166] text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:rotate-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Ver en Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
