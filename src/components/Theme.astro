@@ -12,7 +12,8 @@ const drinks = [
   { name: 'Piña coladas', icon: '🍹' },
   { name: 'Margaritas', icon: '🍸' },
   { name: 'Micheladas', icon: '🍺' },
-  { name: 'Azulitos', icon: '🥤' }
+  { name: 'Azulitos', icon: '🥤' },
+  { name: 'Agua fresca', icon: '🥛' },
 ];
 
 const colors = [
@@ -38,30 +39,13 @@ const colors = [
     <div class="w-16 h-16 rounded-full opacity-40" style="background-color: var(--yellow);"></div>
   </div>
   <div class="container mx-auto px-4">
-    <h2 class="section-title gradient-text fade-in">Temática Pool Party</h2>
+    <h2 class="section-title gradient-text fade-in">Pool Party</h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-      <!-- Theme items -->
-      <div>
-        <h3 class="text-2xl font-bold mb-6" style="color: var(--blue);">Elementos de la fiesta</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {themeItems.map((item, index) => (
-            <div 
-              class="card p-4 flex flex-col items-center text-center bg-white rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-blue-200 fade-in-delay-1 group"
-              style={`animation-delay: ${0.1 * index}s`}
-            >
-              <div class="text-4xl mb-2 transform transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">{item.icon}</div>
-              <p class="text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300">{item.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-12 max-w-5xl mx-auto">
       <!-- Colors and drinks -->
       <div>
         <!-- Colors -->
         <div class="mb-10">
-          <h3 class="text-2xl font-bold mb-6" style="color: var(--pink);">Colores</h3>
           <div class="flex flex-wrap gap-8 justify-center">
             <div class="flex flex-col items-center transition-all duration-500 hover:scale-110 fade-in-delay-1 group cursor-pointer">
               <div class="w-16 h-16 rounded-full shadow-lg transition-all duration-500 group-hover:shadow-cyan-300/50 group-hover:shadow-xl" style="background-color: #4ECDC4;"></div>

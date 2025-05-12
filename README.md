@@ -1,48 +1,74 @@
-# Astro Starter Kit: Basics
+# Samantha's XV Pool Party - Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+Una elegante landing page para la fiesta de XV años de Samantha con temática de Pool Party, desarrollada con Astro y Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Samantha's XV Pool Party](https://i.imgur.com/placeholder.jpg)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Características
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Diseño moderno y colorido con temática de piscina
+- Animaciones suaves y efectos interactivos
+- Secciones para detalles del evento, temática, ubicación y playlist
+- Completamente responsivo para todos los dispositivos
+- Integración con Spotify para playlist colaborativa
+- Mapa interactivo de Google Maps para la ubicación
 
-## 🚀 Project Structure
+## Tecnologías utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build/) - Framework web rápido y ligero
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitario
+- [Google Maps API](https://developers.google.com/maps) - Para el mapa de ubicación
+- [Spotify API](https://developer.spotify.com/) - Para la integración de la playlist
+
+## Estructura del proyecto
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── images/
+│       └── pool-pattern.svg
 ├── src/
+│   ├── components/
+│   │   ├── Details.astro
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Location.astro
+│   │   ├── Playlist.astro
+│   │   └── Theme.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Comandos
 
-## 🧞 Commands
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Instala dependencias                             |
+| `npm run dev`             | Inicia servidor local en `localhost:4321`        |
+| `npm run build`           | Construye el sitio para producción en `./dist/`  |
+| `npm run preview`         | Vista previa de la construcción antes de publicar|
 
-## 👀 Want to learn more?
+## Personalización
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Puedes personalizar fácilmente esta landing page modificando:
+
+- Colores y estilos en `src/styles/global.css`
+- Información del evento en los componentes correspondientes
+- Playlist de Spotify en `src/components/Playlist.astro`
+- Ubicación del mapa en `src/components/Location.astro`
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+
+---
+
+Desarrollado con ❤️ para Samantha
