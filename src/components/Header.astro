@@ -1,0 +1,53 @@
+---
+---
+
+<header class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="text-2xl font-bold" style="color: var(--pink);">
+      <span class="font-dancing">Samantha</span>
+    <span style="color: var(--blue);">XV</span></div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#detalles" class="nav-link">Detalles</a>
+      <a href="#tematica" class="nav-link">Temática</a>
+      <a href="#ubicacion" class="nav-link">Ubicación</a>
+      <a href="#playlist" class="nav-link">Playlist</a>
+    </nav>
+    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+    <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#detalles" class="nav-link">Detalles</a>
+      <a href="#tematica" class="nav-link">Temática</a>
+      <a href="#ubicacion" class="nav-link">Ubicación</a>
+      <a href="#playlist" class="nav-link">Playlist</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>

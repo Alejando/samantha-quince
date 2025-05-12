@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+:root {
+  --blue: #4ECDC4;
+  --yellow: #FFD166;
+  --pink: #FF6B6B;
+  --orange: #FF9F1C;
+}
+
+/* Custom button styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s;
+  transform: scale(1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+}
+
+.btn-primary:hover {
+  background-color: #3db8b0;
+}
+
+.btn-secondary {
+  background-color: var(--pink);
+}
+
+.btn-secondary:hover {
+  background-color: #ff5252;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--blue), var(--pink));
+}
+
+/* Navigation styles */
+.nav-link {
+  color: #4b5563;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+/* Asegurar que todas las secciones sean visibles */
+section {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  min-height: 50vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Custom animations */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: float 5s ease-in-out infinite;
+}
+
+.float-reverse {
+  animation: float-reverse 4s ease-in-out infinite;
+}
+
+.float-small {
+  animation: float-small 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float-reverse {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float-small {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Nuevas animaciones para la sección de detalles */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.3s;
+}
+
+.fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.6s;
+}
+
+.fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.9s;
+}
+
+.fade-in-delay-4 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de hover para las tarjetas de detalles */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+.scale-in {
+  opacity: 0;
+  animation: scaleIn 0.8s ease forwards;
+}
+
+.scale-in-delay-1 {
+  opacity: 0;
+  animation: scaleIn 0.8s ease forwards 0.2s;
+}
+
+.scale-in-delay-2 {
+  opacity: 0;
+  animation: scaleIn 0.8s ease forwards 0.4s;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Efecto de agua de piscina simplificado */
+.pool-water-simple {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(78, 205, 196, 0.1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.water-reflection {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 75%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  background-size: 200% 200%;
+  animation: water-shimmer 15s ease-in-out infinite alternate;
+  opacity: 0.7;
+}
+
+@keyframes water-shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.water-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500"><path d="M0,100 C150,50 350,150 500,100 L500,00 L0,0 Z" fill="%23FFFFFF" opacity="0.05"/></svg>');
+  background-size: 100% 100%;
+  animation: water-pattern-move 10s ease-in-out infinite alternate;
+  opacity: 0.3;
+}
+
+.water-pattern:nth-child(2) {
+  background-size: 80% 80%;
+  animation-duration: 13s;
+  animation-delay: -5s;
+  opacity: 0.2;
+}
+
+.water-pattern:nth-child(3) {
+  background-size: 120% 120%;
+  animation-duration: 17s;
+  animation-delay: -8s;
+  opacity: 0.15;
+}
+
+@keyframes water-pattern-move {
+  0% {
+    transform: translateX(-5%) translateY(0%) scale(1);
+  }
+  100% {
+    transform: translateX(5%) translateY(2%) scale(1.05);
+  }
+}
+
+.water-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(78, 205, 196, 0.05) 50%, rgba(78, 205, 196, 0.2) 100%);
+  mix-blend-mode: screen;
+}

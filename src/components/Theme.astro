@@ -1,0 +1,103 @@
+---
+const themeItems = [
+  { name: 'Pelotas de playa', icon: '🏐' },
+  { name: 'Pistolas de agua', icon: '🔫' },
+  { name: 'Lentes de sol', icon: '🕶️' },
+  { name: 'Frutas', icon: '🍍' },
+  { name: 'Paletas de hielo', icon: '🍧' },
+  { name: 'Inflables', icon: '🛟' }
+];
+
+const drinks = [
+  { name: 'Piña coladas', icon: '🍹' },
+  { name: 'Margaritas', icon: '🍸' },
+  { name: 'Micheladas', icon: '🍺' },
+  { name: 'Azulitos', icon: '🥤' }
+];
+
+const colors = [
+  { name: 'Azul', color: '#4ECDC4' },
+  { name: 'Amarillo', color: '#FFD166' },
+  { name: 'Rosa', color: '#FF6B6B' },
+  { name: 'Naranja', color: '#FF9F1C' }
+];
+---
+
+<section id="tematica" style="padding: 50px 0; background-color: rgba(78, 205, 196, 0.05);" class="relative overflow-hidden">
+  <!-- Elementos flotantes decorativos -->
+  <div class="absolute top-24 left-20 float-reverse">
+    <div class="w-14 h-14 rounded-full opacity-40" style="background-color: var(--pink);"></div>
+  </div>
+  <div class="absolute top-1/4 right-12 float-small" style="animation-delay: 0.7s">
+    <div class="w-10 h-10 rounded-full opacity-40" style="background-color: var(--blue);"></div>
+  </div>
+  <div class="absolute bottom-1/3 left-16 float" style="animation-delay: 1.2s">
+    <div class="w-12 h-12 rounded-full opacity-40" style="background-color: var(--orange);"></div>
+  </div>
+  <div class="absolute bottom-1/4 right-1/5 float-slow" style="animation-delay: 0.3s">
+    <div class="w-16 h-16 rounded-full opacity-40" style="background-color: var(--yellow);"></div>
+  </div>
+  <div class="container mx-auto px-4">
+    <h2 class="section-title gradient-text fade-in">Temática Pool Party</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <!-- Theme items -->
+      <div>
+        <h3 class="text-2xl font-bold mb-6" style="color: var(--blue);">Elementos de la fiesta</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {themeItems.map((item, index) => (
+            <div 
+              class="card p-4 flex flex-col items-center text-center bg-white rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-blue-200 fade-in-delay-1 group"
+              style={`animation-delay: ${0.1 * index}s`}
+            >
+              <div class="text-4xl mb-2 transform transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">{item.icon}</div>
+              <p class="text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-300">{item.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <!-- Colors and drinks -->
+      <div>
+        <!-- Colors -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-bold mb-6" style="color: var(--pink);">Colores</h3>
+          <div class="flex flex-wrap gap-8 justify-center">
+            <div class="flex flex-col items-center transition-all duration-500 hover:scale-110 fade-in-delay-1 group cursor-pointer">
+              <div class="w-16 h-16 rounded-full shadow-lg transition-all duration-500 group-hover:shadow-cyan-300/50 group-hover:shadow-xl" style="background-color: #4ECDC4;"></div>
+              <p class="text-gray-700 font-medium mt-2 transition-colors duration-300 group-hover:text-[#4ECDC4]">Azul</p>
+            </div>
+            <div class="flex flex-col items-center transition-all duration-500 hover:scale-110 fade-in-delay-1 group cursor-pointer">
+              <div class="w-16 h-16 rounded-full shadow-lg transition-all duration-500 group-hover:shadow-yellow-300/50 group-hover:shadow-xl" style="background-color: #FFD166;"></div>
+              <p class="text-gray-700 font-medium mt-2 transition-colors duration-300 group-hover:text-[#FFD166]">Amarillo</p>
+            </div>
+            <div class="flex flex-col items-center transition-all duration-500 hover:scale-110 fade-in-delay-2 group cursor-pointer">
+              <div class="w-16 h-16 rounded-full shadow-lg transition-all duration-500 group-hover:shadow-pink-300/50 group-hover:shadow-xl" style="background-color: #FF6B6B;"></div>
+              <p class="text-gray-700 font-medium mt-2 transition-colors duration-300 group-hover:text-[#FF6B6B]">Rosa</p>
+            </div>
+            <div class="flex flex-col items-center transition-all duration-500 hover:scale-110 fade-in-delay-2 group cursor-pointer">
+              <div class="w-16 h-16 rounded-full shadow-lg transition-all duration-500 group-hover:shadow-orange-300/50 group-hover:shadow-xl" style="background-color: #FF9F1C;"></div>
+              <p class="text-gray-700 font-medium mt-2 transition-colors duration-300 group-hover:text-[#FF9F1C]">Naranja</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Drinks -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6" style="color: var(--orange);">Bebidas (sin alcohol</h3>
+          <div class="grid grid-cols-2 gap-4">
+            {drinks.map((drink, index) => (
+              <div 
+                class="card p-4 flex items-center gap-3 bg-white rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-orange-200 fade-in-delay-1 group"
+                style={`animation-delay: ${0.2 * index}s`}
+              >
+                <div class="text-4xl transform transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">{drink.icon}</div>
+                <p class="text-gray-700 font-medium group-hover:text-orange-500 transition-colors duration-300">{drink.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
