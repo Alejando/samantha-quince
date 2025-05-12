@@ -2,6 +2,8 @@
 
 Una elegante landing page para la fiesta de XV años de Samantha con temática de Pool Party, desarrollada con Astro y Tailwind CSS.
 
+**Sitio web:** [https://mis-quince.com.mx/samantha/](https://mis-quince.com.mx/samantha/)
+
 ![Samantha's XV Pool Party](https://i.imgur.com/placeholder.jpg)
 
 ## Características
