@@ -4,7 +4,12 @@ interface Props {
   eventColor?: string;
 }
 
-const { eventName = "Evento", eventColor = "var(--pink)" } = Astro.props;
+const { 
+  eventName = "Evento", 
+  eventColor = "var(--pink)",
+  eventSubName = "",
+  eventSubColor = "var(--blue)"
+ } = Astro.props;
 const basePath = import.meta.env.BASE_URL;
 ---
 
@@ -16,11 +21,11 @@ const basePath = import.meta.env.BASE_URL;
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          MisQuince
         </span>
       </a>
       <div class="text-2xl font-bold" style={`color: ${eventColor};`}>
         <span class="font-dancing">{eventName}</span>
+        <span class="font-normal" style={`color: ${eventSubColor};`}>{eventSubName}</span>
       </div>
     </div>
     <nav class="hidden md:flex space-x-6">
