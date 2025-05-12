@@ -3,7 +3,11 @@ interface Props {
 	title?: string;
 }
 
+import { getImage } from "astro:assets";
 const { title = "Fiesta de 15 años de Samantha" } = Astro.props;
+
+// Obtener la ruta base para los recursos
+const basePath = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -11,7 +15,8 @@ const { title = "Fiesta de 15 años de Samantha" } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/samantha/favicon.svg" />
+		<meta name="base-path" content={basePath} />
+		<link rel="icon" type="image/svg+xml" href={`${basePath}favicon.svg`} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -20,6 +25,7 @@ const { title = "Fiesta de 15 años de Samantha" } = Astro.props;
 	<body class="font-poppins">
 		<slot />
 		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script is:inline src={`${basePath}scripts/base-path.js`}></script>
 		<script is:inline>
 			window.addEventListener('load', function() {
 				AOS.init({

@@ -7,7 +7,14 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://mis-quince.com.mx',
   base: '/samantha',
+  trailingSlash: 'always',
+  build: {
+    assets: 'assets'
+  },
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      assetsInlineLimit: 0
+    }
   }
 });
