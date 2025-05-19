@@ -1,10 +1,35 @@
 @import "tailwindcss";
 
 :root {
+  /* Paleta principal */
+  --pink: #FF6B6B;
   --blue: #4ECDC4;
   --yellow: #FFD166;
-  --pink: #FF6B6B;
   --orange: #FF9F1C;
+  
+  /* Paleta formal */
+  --formal-primary: #8E44AD;
+  --formal-secondary: #D6A2E8;
+  --formal-accent: #F1C40F;
+  --formal-dark: #34495E;
+  
+  /* Paleta elegante */
+  --elegant-primary: #2C3E50;
+  --elegant-secondary: #E74C3C;
+  --elegant-accent: #F1C40F;
+  --elegant-light: #ECF0F1;
+  
+  /* Paleta moderna */
+  --modern-primary: #3498DB;
+  --modern-secondary: #2ECC71;
+  --modern-accent: #E74C3C;
+  --modern-dark: #2C3E50;
+  
+  /* Paleta vintage */
+  --vintage-primary: #D35400;
+  --vintage-secondary: #F39C12;
+  --vintage-accent: #16A085;
+  --vintage-light: #ECF0F1;
 }
 
 /* Custom button styles */
